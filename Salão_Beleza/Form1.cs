@@ -42,6 +42,27 @@ namespace Salão_Beleza
 
         }
 
-       
+        private void Cíliost_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbx_informacoes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_2(object sender, EventArgs e)
+        {
+
+        }
+        
+
+        private void btn_pagar_Click_1(object sender, EventArgs e)
+        {
+            Tela_pagamento Form1 = new Tela_pagamento();
+            Form1.ShowDialog();
+        
+        }
     }
 }
