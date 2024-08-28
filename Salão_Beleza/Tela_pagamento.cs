@@ -26,5 +26,12 @@ namespace Salão_Beleza
         {
 
         }
+
+        private void btn_pagamento_Click(object sender, EventArgs e)
+        {
+            Tela_AP Tela_pagamento = new Tela_AP();
+            Tela_pagamento.ShowDialog();
+
+        }
     }
 }

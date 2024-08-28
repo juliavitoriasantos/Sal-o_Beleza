@@ -138,6 +138,7 @@
             this.btn_pagamento.TabIndex = 8;
             this.btn_pagamento.Text = "Pagar";
             this.btn_pagamento.UseVisualStyleBackColor = false;
+            this.btn_pagamento.Click += new System.EventHandler(this.btn_pagamento_Click);
             // 
             // ptb_agradecimento
             // 
