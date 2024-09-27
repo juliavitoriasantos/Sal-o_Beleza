@@ -45,6 +45,8 @@
             this.cbx_cilios = new System.Windows.Forms.ComboBox();
             this.cbx_sobrancelha = new System.Windows.Forms.ComboBox();
             this.pnl_escolhas = new System.Windows.Forms.FlowLayoutPanel();
+            this.lbl_informaacoes = new System.Windows.Forms.Label();
+            this.lbl_informacoes2 = new System.Windows.Forms.Label();
             this.pnl_cadastro = new System.Windows.Forms.FlowLayoutPanel();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.txb_nome = new System.Windows.Forms.TextBox();
@@ -52,8 +54,6 @@
             this.txb_numero = new System.Windows.Forms.TextBox();
             this.lbl_email = new System.Windows.Forms.Label();
             this.txb_email = new System.Windows.Forms.TextBox();
-            this.lbl_informaacoes = new System.Windows.Forms.Label();
-            this.lbl_informacoes2 = new System.Windows.Forms.Label();
             this.pnl_escolhas.SuspendLayout();
             this.pnl_cadastro.SuspendLayout();
             this.SuspendLayout();
@@ -256,6 +256,25 @@
             this.pnl_escolhas.Size = new System.Drawing.Size(199, 308);
             this.pnl_escolhas.TabIndex = 30;
             // 
+            // lbl_informaacoes
+            // 
+            this.lbl_informaacoes.AutoSize = true;
+            this.lbl_informaacoes.Location = new System.Drawing.Point(3, 266);
+            this.lbl_informaacoes.Name = "lbl_informaacoes";
+            this.lbl_informaacoes.Size = new System.Drawing.Size(193, 13);
+            this.lbl_informaacoes.TabIndex = 30;
+            this.lbl_informaacoes.Text = "Telefone para contato: (12) 997872016";
+            this.lbl_informaacoes.Click += new System.EventHandler(this.label1_Click_2);
+            // 
+            // lbl_informacoes2
+            // 
+            this.lbl_informacoes2.AutoSize = true;
+            this.lbl_informacoes2.Location = new System.Drawing.Point(3, 279);
+            this.lbl_informacoes2.Name = "lbl_informacoes2";
+            this.lbl_informacoes2.Size = new System.Drawing.Size(132, 13);
+            this.lbl_informacoes2.TabIndex = 31;
+            this.lbl_informacoes2.Text = "E-mail: vitoria.j@gmail.com";
+            // 
             // pnl_cadastro
             // 
             this.pnl_cadastro.Controls.Add(this.lbl_nome);
@@ -319,25 +338,6 @@
             this.txb_email.Size = new System.Drawing.Size(100, 20);
             this.txb_email.TabIndex = 37;
             // 
-            // lbl_informaacoes
-            // 
-            this.lbl_informaacoes.AutoSize = true;
-            this.lbl_informaacoes.Location = new System.Drawing.Point(3, 266);
-            this.lbl_informaacoes.Name = "lbl_informaacoes";
-            this.lbl_informaacoes.Size = new System.Drawing.Size(193, 13);
-            this.lbl_informaacoes.TabIndex = 30;
-            this.lbl_informaacoes.Text = "Telefone para contato: (12) 997872016";
-            this.lbl_informaacoes.Click += new System.EventHandler(this.label1_Click_2);
-            // 
-            // lbl_informacoes2
-            // 
-            this.lbl_informacoes2.AutoSize = true;
-            this.lbl_informacoes2.Location = new System.Drawing.Point(3, 279);
-            this.lbl_informacoes2.Name = "lbl_informacoes2";
-            this.lbl_informacoes2.Size = new System.Drawing.Size(132, 13);
-            this.lbl_informacoes2.TabIndex = 31;
-            this.lbl_informacoes2.Text = "E-mail: vitoria.j@gmail.com";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -345,7 +345,7 @@
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1728, 1061);
+            this.ClientSize = new System.Drawing.Size(1028, 749);
             this.Controls.Add(this.pnl_escolhas);
             this.Controls.Add(this.btn_pagar);
             this.Controls.Add(this.pnl_cadastro);
