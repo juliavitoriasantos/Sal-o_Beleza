@@ -163,7 +163,7 @@
             // lbldescricao
             // 
             this.lbldescricao.AutoSize = true;
-            this.lbldescricao.Location = new System.Drawing.Point(31, 56);
+            this.lbldescricao.Location = new System.Drawing.Point(31, 61);
             this.lbldescricao.Name = "lbldescricao";
             this.lbldescricao.Size = new System.Drawing.Size(55, 13);
             this.lbldescricao.TabIndex = 1;
@@ -173,7 +173,7 @@
             // 
             this.lbltipo.AutoSize = true;
             this.lbltipo.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.lbltipo.Location = new System.Drawing.Point(31, 19);
+            this.lbltipo.Location = new System.Drawing.Point(31, 24);
             this.lbltipo.Name = "lbltipo";
             this.lbltipo.Size = new System.Drawing.Size(28, 13);
             this.lbltipo.TabIndex = 0;
