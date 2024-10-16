@@ -94,7 +94,7 @@
             "Maquiagem definitiva",
             "Micropigmentação",
             "Coloração"});
-            this.comboBox3.Location = new System.Drawing.Point(109, 53);
+            this.comboBox3.Location = new System.Drawing.Point(109, 58);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 5;
@@ -129,7 +129,7 @@
             "550,00",
             "500,00",
             "50,00"});
-            this.comboBox2.Location = new System.Drawing.Point(109, 91);
+            this.comboBox2.Location = new System.Drawing.Point(109, 94);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 4;
@@ -144,7 +144,7 @@
             "Depilação Facial",
             "Cílios",
             "Sobrancelhas"});
-            this.comboBox1.Location = new System.Drawing.Point(109, 16);
+            this.comboBox1.Location = new System.Drawing.Point(109, 24);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 3;
