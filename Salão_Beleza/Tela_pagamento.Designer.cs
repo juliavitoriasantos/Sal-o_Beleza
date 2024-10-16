@@ -78,6 +78,7 @@
             this.cbx_pagamento.Name = "cbx_pagamento";
             this.cbx_pagamento.Size = new System.Drawing.Size(121, 21);
             this.cbx_pagamento.TabIndex = 1;
+            this.cbx_pagamento.SelectedIndexChanged += new System.EventHandler(this.cbx_pagamento_SelectedIndexChanged);
             // 
             // mc_data
             // 

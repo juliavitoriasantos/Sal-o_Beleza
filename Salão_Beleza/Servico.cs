@@ -10,24 +10,24 @@ using System.Windows.Forms;
 
 namespace Salão_Beleza
 {
-    public partial class Tela_pagamento : Form
+    public partial class Servico : Form
     {
-        public Tela_pagamento()
+        public Servico()
         {
             InitializeComponent();
         }
 
-        private void Tela_pagamento_Load(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void Servico_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void cbx_pagamento_SelectedIndexChanged(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
