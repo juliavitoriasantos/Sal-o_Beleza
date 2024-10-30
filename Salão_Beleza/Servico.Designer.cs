@@ -62,6 +62,7 @@
             this.btnsalvar.TabIndex = 6;
             this.btnsalvar.Text = "Salvar";
             this.btnsalvar.UseVisualStyleBackColor = true;
+            this.btnsalvar.Click += new System.EventHandler(this.btnsalvar_Click);
             // 
             // comboBox3
             // 

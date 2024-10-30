@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Salão_Beleza
 {
-    public partial class Servico : Form
+    public partial class Tela_Tipo : Form
     {
-        public Servico()
+        public Tela_Tipo()
         {
             InitializeComponent();
         }
@@ -22,19 +22,18 @@ namespace Salão_Beleza
 
         }
 
-        private void Servico_Load(object sender, EventArgs e)
+        private void Tela_Tipo_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void btncadastrar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnsalvar_Click(object sender, EventArgs e)
-        {
-
+            string nome = txbnome.Text;
+            string status = cbbstatus.Text;
+            Tipo tipo = new Tipo(nome, status);
+            TipoDAO tipoDAO = new TipoDAO();
+            tipoDAO.Inserir(tipo);
         }
     }
 }
