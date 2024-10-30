@@ -18,5 +18,5 @@ namespace Salão_Beleza
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Tela_Tipo());
         }
-    }
+    } 
 }
