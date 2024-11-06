@@ -44,7 +44,6 @@ namespace Salão_Beleza
             {
                 return con;
             }
-
         }
     }
 
