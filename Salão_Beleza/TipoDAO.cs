@@ -114,17 +114,7 @@ namespace Salão_Beleza
             }
           return listaDeTipos;
         }
-        public bool ValidateLogin(Tipo)
-            Cmd.Connection = SqlConnection.ReturnConnection();
-            Cmd.CommandText = "SELECT * FROM Tipo WHERE" + "CodTipo = @codTipo AND" + "Nome = @nome";
-            Cmd.Parameters.AddwithValue("@codTipo", tipo.);
-            Cmd.Parameters.AddwithValue("@nome", );
-
-            List<Tipo> props = new List<Tipo>();
-            try{
-        SqlDataReader rd = SqlCommand.ExecuteReader();
-        //Enquanto for possível continuar a leitura das linhas
-        while (rd.Read()){
+       
 
     }
 }

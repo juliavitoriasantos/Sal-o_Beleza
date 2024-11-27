@@ -1,0 +1,177 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Salão_Beleza
+{
+    internal class Cad
+    {
+    private Connection Connect { get; set; }
+        private SqlCommand Command { get; set; }
+        //Sempre o nome da classe
+        public CadDAO() //método construtor
+        {
+            Connect = new Connection();
+            Command = new SqlCommand();
+        }
+        public bool Insert(Cad cad)
+        {
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText =
+            @"INSERT INTO 
+            Broker VALUES 
+            (@cadName, @cadCode, @telefone, @email, @password)";
+
+            Command.Parameters.AddWithValue("@CadName", cad.CadName);
+            Command.Parameters.AddWithValue("@CadCode", cad.CadCode);
+            Command.Parameters.AddWithValue("@telefone", cad.Telephone);
+            Command.Parameters.AddWithValue("@email", cad.Email);
+            Command.Parameters.AddWithValue("@password", cad.Password);
+            
+            try
+            {
+                //Executa query definida acima.
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao inserir " +
+                    "corretor no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+            return true;
+        }
+
+
+        public void Update(Broker broker)
+        {
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText = @"UPDATE Cad SET 
+            CadName = @cadName,
+            CadCode = @cadCode,
+            Telefone = @telefone,
+            Email = @email,
+            Password = @password
+            WHERE Id = @id";
+
+            Command.Parameters.AddWithValue("@id", cad.Id);
+            Command.Parameters.AddWithValue("@cadName", cad.CadName);
+            Command.Parameters.AddWithValue("@cadCode", cad.CadCode);
+            Command.Parameters.AddWithValue("@telefone", cad.Telefone);
+            Command.Parameters.AddWithValue("@email", cad.Email);
+            Command.Parameters.AddWithValue("@password", cad.Password);
+
+            try
+            {
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: " +
+                    "Problemas ao realizar atualização dos dados do " +
+                    "corretor no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+        }
+
+        public void Del(int brokerCode) //Delete
+        {
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText = @"DELETE FROM Broker 
+            WHERE Id = @cadCode";
+            Command.Parameters.AddWithValue("@cadCode", cadCode);
+            try
+            {
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao excluir " +
+                    "cadastro do corretor do banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+        }
+        public List<Cad> ListAllCad()
+        {
+
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText = "SELECT * FROM Cad";
+
+            List<Cad> cad = new List<Cad>(); //Instancio a list com o tamanho padrão.
+            try
+            {
+                SqlDataReader rd = Command.ExecuteReader();
+
+                //Enquanto for possível continuar a leitura das linhas que foram retornadas na consulta, execute.
+                while (rd.Read())
+                {
+                    Cad cad = new Cad(
+                        (int)rd["Id"],
+                        (string)rd["CadName"],
+                        (string)rd["CadCode"],
+                        (string)rd["Telenone"],
+                        (string)rd["Email"],
+                        (string)rd["Password"]
+                        );
+                    cads.Add(cad);
+                }
+                rd.Close();
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao realizar " +
+                    "leitura de imóveis no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+
+            return brokers;
+        }
+        public bool ValidateLogin(Cad cad)
+        {
+
+            Command.Connection = Connect.ReturnConnection();
+            Command.CommandText = "SELECT * FROM Broker WHERE " +
+                                  "CadCode = @cadCode AND " +
+                                  "Password = @password";
+            Command.Parameters.AddWithValue("@cadCode", cad.CadCode);
+            Command.Parameters.AddWithValue("@password", cad.Password);
+
+            try
+            {
+                SqlDataReader rd = Command.ExecuteReader();
+                if (rd.HasRows)
+                {
+                    rd.Close();
+                    return true;
+                }
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro: Problemas ao realizar " +
+                    "leitura de dados do corretor no banco.\n" + err.Message);
+            }
+            finally
+            {
+                Connect.CloseConnection();
+            }
+
+            return false;
+        }
+    }
+}
+    
+

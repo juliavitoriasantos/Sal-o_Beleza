@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadDAO.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CadDAO.Designer.cs">
+      <DependentUpon>CadDAO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Conexao.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -60,6 +66,12 @@
     </Compile>
     <Compile Include="Servico.Designer.cs">
       <DependentUpon>Servico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tela_Cadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tela_Cadastro.Designer.cs">
+      <DependentUpon>Tela_Cadastro.cs</DependentUpon>
     </Compile>
     <Compile Include="Tela_pagamento.cs">
       <SubType>Form</SubType>
@@ -91,12 +103,16 @@
     <EmbeddedResource Include="Servico.resx">
       <DependentUpon>Servico.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tela_Cadastro.resx">
+      <DependentUpon>Tela_Cadastro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tela_pagamento.resx">
       <DependentUpon>Tela_pagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tela_Tipo.resx">
       <DependentUpon>Tela_Tipo.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Cad.DAO" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
