@@ -16,7 +16,7 @@ namespace Salão_Beleza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Tela_Tipo());
+            Application.Run(new Tela_Cadastro());
         }
     } 
 }
